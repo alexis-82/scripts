@@ -9,3 +9,4 @@ sed -i 's/'$var1'/'$var2'/g' init/lang/en/english
 sed -i 's/'$var1'/'$var2'/g' init/lang/en/lib_en
 sed -i 's/'$var1'/'$var2'/g' init/lang/en/update
 cat /dev/null > yt-ver
+echo 1.8 > version
