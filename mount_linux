@@ -1,0 +1,36 @@
+# Formatting Drive EXT4
+mkfs.ext4 /dev/sdX
+
+# Modify file /etc/fstab
+/dev/sdX /media/tmp ext4 defaults 0 1
+UUID=----- /media/tmp ext4 defaults 0 1
+
+# Find UUID
+ls -l /dev/disk/by-uuid or lsblk -f
+
+# Automount
+mount -a
+
+# Mounting Control
+lsblk -f
+
+
+
+
+# Options for fstab
+Auto: The file system will be mounted at boot time, automatically.
+Noauto: The file system is only mounted when you enter the mount -a command.
+Exec: The execution of binaries is allowed on this file system.
+Noexec: The execution of binaries is not allowed on this file system.
+Ro: The file system should be mounted as read-only.
+Rw: The file system should be mounted as read-write.
+Sync: File writes should be conducted immediately and not buffered. Best reserved for floppy disks, if anyone is still using them. Incurs a performance penalty.
+Async: File writes should be buffered and optimized.
+User: Any user is allowed to mount the file system.
+Nouser: The root user is the only user who can mount this file system.
+Defaults: This is a shorthand way of specifying a set of common settings: (rw, suid, dev, exec, auto, nouser, and async).
+Suid: Allows the operation of the suid and sgid bits. The suid bit is used to allow a file to be executed as root, by a normal user, without giving the user full root privileges. When the sgid bit is set on a directory, files and directories created within that directory have their group ownership set to that of the directory, not to the group of the user who created them.
+Nosuid: Do not permit the use of the suid and sgid bits.
+Noatime: - Do not update the file access times on the file system. This can help performance on old hardware.
+Nodiratime: Do not update the directory access times on the file system.
+Relatime: Update file access times relative to the file modified time.
