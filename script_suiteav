@@ -1,15 +1,16 @@
 #!/bin/bash
-var1=suiteAV-1.7
-var2=suiteAV-1.8
-sed -i 's/'$var1'/'$var2'/g' suiteAV
-sed -i 's/'$var1'/'$var2'/g' init/lang/it/italiano
-sed -i 's/'$var1'/'$var2'/g' init/lang/it/lib_it
-sed -i 's/'$var1'/'$var2'/g' init/lang/it/update
-sed -i 's/'$var1'/'$var2'/g' init/lang/en/english
-sed -i 's/'$var1'/'$var2'/g' init/lang/en/lib_en
-sed -i 's/'$var1'/'$var2'/g' init/lang/en/update
+old=suiteAV-3.0
+new=suiteAV-30
+var=3.0
+sed -i 's/'$old'/'$new'/g' suiteAV
+sed -i 's/'$old'/'$new'/g' init/lang/it/italiano
+sed -i 's/'$old'/'$new'/g' init/lang/it/lib_it
+sed -i 's/'$old'/'$new'/g' init/lang/it/update
+sed -i 's/'$old'/'$new'/g' init/lang/en/english
+sed -i 's/'$old'/'$new'/g' init/lang/en/lib_en
+sed -i 's/'$old'/'$new'/g' init/lang/en/update
 cat /dev/null > yt-ver
-echo 1.8 > version
+echo $var > version
 git add --chmod=+x suiteAV
 cd init/lang/en
 git add --chmod=+x english lib_en update
