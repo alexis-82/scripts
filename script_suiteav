@@ -13,9 +13,9 @@ cat /dev/null > yt-ver
 echo $var > version
 git add --chmod=+x suiteAV
 cd init/lang/en
-git add --chmod=+x english lib_en update
+git add --chmod=+x english lib_en update playlist menu
 cd ..
 cd it
-git add --chmod=+x italian lib_it update
+git add --chmod=+x italian lib_it update playlist menu
 exit
 
