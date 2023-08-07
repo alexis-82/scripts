@@ -1,6 +1,6 @@
 #!/bin/bash
 old=suiteAV-3.0
-new=suiteAV-30
+new=suiteAV-3.0
 var=3.0
 sed -i 's/'$old'/'$new'/g' suiteAV
 sed -i 's/'$old'/'$new'/g' init/lang/it/italiano
