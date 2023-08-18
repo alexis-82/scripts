@@ -18,4 +18,3 @@ cd ..
 cd it
 git add --chmod=+x italian lib_it update playlist menu
 exit
-
