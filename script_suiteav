@@ -1,20 +1,16 @@
 #!/bin/bash
 old=suiteAV-3.0
-new=suiteAV-3.0
-var=3.0
+new=suiteAV-3.2
+var=3.2
 sed -i 's/'$old'/'$new'/g' suiteAV
-sed -i 's/'$old'/'$new'/g' init/lang/it/italiano
-sed -i 's/'$old'/'$new'/g' init/lang/it/lib_it
-sed -i 's/'$old'/'$new'/g' init/lang/it/update
-sed -i 's/'$old'/'$new'/g' init/lang/en/english
-sed -i 's/'$old'/'$new'/g' init/lang/en/lib_en
-sed -i 's/'$old'/'$new'/g' init/lang/en/update
+sed -i 's/'$old'/'$new'/g' init/youtube
+sed -i 's/'$old'/'$new'/g' init/update
+sed -i 's/'$old'/'$new'/g' init/playlist
+sed -i 's/'$old'/'$new'/g' init/packages
 cat /dev/null > yt-ver
 echo $var > version
 git add --chmod=+x suiteAV
-cd init/lang/en
-git add --chmod=+x english lib_en update playlist menu
+cd init
+git add --chmod=+x youtube playlist update packages
 cd ..
-cd it
-git add --chmod=+x italian lib_it update playlist menu
 exit
