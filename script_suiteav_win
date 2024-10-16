@@ -1,0 +1,14 @@
+#!/bin/bash
+old=suiteAV-3.0
+new=suiteAV-3.2
+var=3.2
+sed -i 's/'$old'/'$new'/g' suiteAV.py
+sed -i 's/'$old'/'$new'/g' init/playlist.py
+sed -i 's/'$old'/'$new'/g' init/update.py
+sed -i 's/'$old'/'$new'/g' init/youtube.py
+cat /dev/null > yt-ver
+echo -n $var > version
+git add suiteAV.py
+cd init
+git add playlist.py update.py youtube.py
+exit

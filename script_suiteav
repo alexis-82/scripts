@@ -8,7 +8,7 @@ sed -i 's/'$old'/'$new'/g' init/update
 sed -i 's/'$old'/'$new'/g' init/playlist
 sed -i 's/'$old'/'$new'/g' init/packages
 cat /dev/null > yt-ver
-echo $var > version
+echo -n $var > version
 git add --chmod=+x suiteAV
 cd init
 git add --chmod=+x youtube playlist update packages
