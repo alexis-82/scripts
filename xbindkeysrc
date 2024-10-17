@@ -1,0 +1,5 @@
+# Pacchetti da installare:
+# sudo apt install xbindkeys xsel xdotool
+
+"echo -n | xsel -n -i; pkill xbindkeys; xdotool click 2; xbindkeys" 
+    b:2 + Release
